@@ -1,0 +1,3 @@
+[submodule "DramaQA"]
+	path = DramaQA
+	url = https://github.com/liveseongho/DramaQA.git
