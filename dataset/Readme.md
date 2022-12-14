@@ -68,7 +68,7 @@ https://dramaqa.snu.ac.kr/Dataset 참조
 ![](template 예시 2.png)
 
 
-Did <person> <action> before <person> <action>?
+`Did <person> <action> before <person> <action>?`
 
 ```python
 for frame before(last(<person> <action>)):
@@ -97,7 +97,7 @@ for frame exists(<unknown-person> <action>) and before(last(<person> <action>)):
     
 return No
 ```
-exists(<unknown-person> <action>) :  “<action>을 하는 <누군가>가 있다”는 조건
+`exists(<unknown-person> <action>)` :  “`<action>`을 하는 <누군가>가 있다”는 조건
 
 
 - OOD Case 2) <person>
@@ -133,7 +133,9 @@ for frame after(first(<person> <action>)):
 return No
 ```
 
-아래에는 위의 pseudo code를 전부 기술하지 않고 template 이름 및 형태만 기술함.
+총 21개의 annotation 기반 template을 만든 결과를 기술함.  
+아래에는 위의 pseudo code를 전부 기술하지 않고 template 이름 및 형태만 기술함.  
+각 template의 이름은 질문이 묻고자 하는 바를 간략화하여 나타낸 것임.
 
 - Template #1 actExistsBefore
   - `Did <person1> <action1> after <person2> <action2>?`
@@ -149,36 +151,36 @@ return No
   - `Where was <person1> after <person> was at <place>?`
 - Template #7 SamePlcWhenAct
   - `Were <person1> and <person2> in the same place when <person1> <action>?`
-- Template #9 actWhereObj 
+- Template #8 actWhereObj 
   - `Did <person> <action> at <place>?`
-- Template #10 emoWhenAct
+- Template #9 emoWhenAct
   - `What was <emotion> when <person> <action>?`
-- Template #11 plcWhenAct 
+- Template #10 plcWhenAct 
   - `Did <person> <action> was at <place>?`
-- Template #12 relExistsWhile 
+- Template #11 relExistsWhile 
   - `Is (does) <person> <relationship> <object> while <person> <action>?`
-- Template #13 relExistsBefore
+- Template #12 relExistsBefore
   - `Did <person> <relationship> <object> before <person> <action>?`
-- Template #14 relExistsAfter 
+- Template #13 relExistsAfter 
   - `Did <person> <relationship> <object> after <person> <action>?`
-- Template #15 actUsingObj 
+- Template #14 actUsingObj 
   - `What did <person> do first using <object>?`
-- Template #16 placeWheremeet 
+- Template #15 placeWheremeet 
   - `Did <person> do first using <object>?`
   - `Where <place> did <person> and <person> meet?`
-- Template #17 relatedObjWhileAct
+- Template #16 relatedObjWhileAct
   - `What is <object> interacted with <person>  when <person> <action>?`
-- Template #18 whoExistsBefore
+- Template #17 whoExistsBefore
   - `Who(<anyone>) are with in there  with <person> before <person> <action>?`
-- Template #19 whoFeelingEmoWhenAct
+- Template #18 whoFeelingEmoWhenAct
   - `Who(<anyone>) was feeling <emotion> when <person> <action>?`
-- Template #20 actLengthLongerCompare 
+- Template #19 actLengthLongerCompare 
   - `Was the <person> <action1> or <action2> for longer?`
-- Template #21 actLengthShorterCompare
+- Template #20 actLengthShorterCompare
   - `Was the person <action>or <action>for less time?`
-- Template #22 objTime
+- Template #21 objTime
   - `Did the <person> contact a <object> before <action>?`
-    - `<object> : related object in person annotation`
+  - `<object> : related object in person annotation`
 
 ###
 
