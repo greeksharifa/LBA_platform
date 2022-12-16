@@ -64,8 +64,8 @@ https://dramaqa.snu.ac.kr/Dataset 참조
 
 ### Template #1 actExistsBefore
 
-![](template 예시 1.png)
-![](template 예시 2.png)
+![](template_example1.png)
+![](template_example2.png)
 
 
 `Did <person> <action> before <person> <action>?`
